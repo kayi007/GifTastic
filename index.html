@@ -11,14 +11,14 @@
     <!-- CSS Link -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Fredericka+the+Great|Great+Vibes|Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <!-- jQuery Library CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>GifTastic</title>
 </head>
 <body>
     <header>
-        <div class="container-fluid border-bottom mb-4">
+        <div class="container-fluid mb-4" id="head">
             <div class="row">
                 <div class="col">
                     <h1 class="text-center p-4">GifTastic!</h1>
@@ -27,7 +27,7 @@
         </div>
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
         <div class="row">
             <!-- first col for gif -->
             <div class="col-6">
@@ -35,20 +35,41 @@
                     <div class="card-header">
                         GIPHY
                     </div>
-                    <div class="card-body">
+                    <div class="card-body gifDisplay">
                         
                     </div>
                 </div>
             </div>
             <!-- second col for input and tags -->
             <div class="col-6">
+                <!-- user input tv shows -->
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Add a TV Show:</label>
-                    <input type="email" class="form-control mb-2" id="exampleFormControlInput1" placeholder="Sherlock Holmes">
-                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    <label class="font-weight-bold" for="addTVshow">Add a TV Show:</label>
+                    <input type="text" class="form-control mb-2" id="userInput" placeholder="Sherlock Holmes">
+                    <button type="submit" class="btn btn-primary btn-sm" id="submit">Submit</button>
+                    <!-- <input class="btn btn-primary btn-sm" id="submit" type="submit" value="Submit"> -->
+                </div>
+                <!-- Display tags -->
+                <div class="row">
+                    <div class="col border p-3">
+                        <div id="tags-view"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container-fluid fixed-bottom" id="end">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <p id="lastP">Copyright &copy; Kathleen Leung</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
