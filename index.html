@@ -43,14 +43,15 @@
             <!-- second col for input and tags -->
             <div class="col-6">
                 <!-- user input tv shows -->
-                <div class="form-group">
-                    <label class="font-weight-bold" for="addTVshow">Add a TV Show:</label>
-                    <input type="text" class="form-control mb-2" id="userInput" placeholder="Sherlock Holmes">
-                    <button type="submit" class="btn btn-primary btn-sm" id="submit">Submit</button>
-                    <!-- <input class="btn btn-primary btn-sm" id="submit" type="submit" value="Submit"> -->
-                </div>
+                <form>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="addTVshow">Add a TV Show:</label>
+                        <input type="text" class="form-control mb-2" id="userInput" placeholder="Sherlock Holmes">
+                        <button type="submit" class="btn btn-primary btn-sm" id="submit">Submit</button>
+                    </div>
+                </form>
                 <!-- Display tags -->
-                <div class="row">
+                <div class="row mr-1">
                     <div class="col border p-3">
                         <div id="tags-view"></div>
                     </div>

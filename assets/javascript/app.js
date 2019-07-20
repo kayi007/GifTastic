@@ -2,7 +2,7 @@
 let APIKey = "Ht8WH9eekvUs9LRHgvqvujPAXIqPXuP6";
 
 // Initial Array of TV Shows
-let topics = ["Stranger Things", "The Office", "Friends", "Gossip Girls", "Game of Throne", "The Good Place"];
+let topics = ["Stranger Things", "The Office", "Friends", "Gossip Girls", "Game of Throne", "The Good Place", "Desperate Housewives"];
 
 // Function for displaying tv shows data
 function renderTags(){
@@ -91,12 +91,23 @@ function displayGiphy(){
     });
 }
 
-$("img").on("click", function(){
-
-});
-
-// When gif button is clicked, it displays giphy
+function animation(){
+    let state = $(this).attr("data-state");
+    if (state === "still"){
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    }else{
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+}
 
 // Calling the renderTags function at least once to display the initial list of movies
-$(document).on("click", ".gifBtn", displayGiphy);
-renderTags();
+$(document).ready(function(){
+    renderTags();
+    // When gif button is clicked, it displays giphy
+    // Using $(document).on instead of $(".gifBtn").on to add event listeners to dynamically generated elements
+    $(document).on("click", ".gifBtn", displayGiphy);
+    // When gif imgs are clicked, they show animation or not
+    $(document).on("click", "img", animation);
+});
